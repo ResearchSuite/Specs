@@ -1,0 +1,82 @@
+{
+  "name": "ResearchSuiteExtensions",
+  "version": "0.26.0",
+  "summary": "ResearchSuiteExtensions provides components and helper functions for ResearchSuite based iOS applications.",
+  "description": "ResearchSuiteExtensions provides components and helper functions for ResearchSuite based iOS applications.",
+  "homepage": "https://github.com/ResearchSuite/ResearchSuiteExtensions-iOS",
+  "license": {
+    "type": "Apache 2.0",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "jdkizer9": "jdkizer9@users.noreply.github.com"
+  },
+  "source": {
+    "git": "https://github.com/ResearchSuite/ResearchSuiteExtensions-iOS.git",
+    "tag": "0.26.0"
+  },
+  "platforms": {
+    "ios": "10.0"
+  },
+  "swift_versions": "5.0",
+  "subspecs": [
+    {
+      "name": "Common",
+      "source_files": "source/Common/Classes/**/*",
+      "dependencies": {
+        "ResearchKit": [
+          "~> 1.4"
+        ],
+        "Gloss": [
+          "~> 2.0"
+        ],
+        "SecureQueue": [
+          "~> 0.2"
+        ]
+      }
+    },
+    {
+      "name": "Core",
+      "source_files": "source/Core/Classes/**/*",
+      "resources": "source/Core/Assets/Assets.xcassets",
+      "dependencies": {
+        "ResearchSuiteExtensions/Common": [
+
+        ],
+        "ResearchKit": [
+          "~> 1.4"
+        ],
+        "SwiftyGif": [
+          "~> 4.2"
+        ],
+        "SnapKit": [
+
+        ],
+        "GiphyCoreSDK": [
+
+        ]
+      }
+    },
+    {
+      "name": "RSTBSupport",
+      "source_files": "source/RSTBSupport/Classes/**/*",
+      "dependencies": {
+        "ResearchSuiteExtensions/Core": [
+
+        ],
+        "ResearchSuiteTaskBuilder": [
+          "~> 0.13"
+        ],
+        "Gloss": [
+          "~> 2.0"
+        ],
+        "SwiftyMarkdown": [
+          "~> 0.3"
+        ],
+        "GRMustache.swift": [
+          "~> 4.0"
+        ]
+      }
+    }
+  ]
+}
